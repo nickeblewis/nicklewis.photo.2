@@ -12,10 +12,10 @@
 
 .footer__outer {
   max-width: $max;
-  padding: 4em 1em;
+  padding: 3em 1em;
   margin: 0 auto;
   @include bp(medium) {
-    padding: 4em 2em;
+    padding: 3.5em 2em;
   }
 }
 
@@ -41,20 +41,16 @@
 //Footer Info
 .footer__info {
   h3 {
-    margin: 0 0 .5em 0;
+    margin: 0 0 .75em 0;
     a {
       color: white !important;
       text-decoration: none !important;
     }
   }
   p {
-    color: lighten($base,25%);
+    color: lighten($base, 25%);
     line-height: 1.25 !important;
-    margin-bottom: .5em;
-  }
-  a {
-    color: lighten($base,25%) !important;
-    text-decoration: underline !important;
+    margin-bottom: .75em;
   }
 }
 
@@ -83,11 +79,11 @@
 
 //Foooter Icons
 .footer .icon {
-  fill: lighten($base,25%);
+  fill: white;
   display: inline-block;
   height: 1.75rem;
   width: 1.75rem;
-  margin: 0 0 0 -.25rem;
+  margin: 0 0 -.75rem -.25rem;
 }
 
 .footer .icon--facebook {
@@ -95,4 +91,14 @@
 }
 .footer .icon--instagram {
   margin-right: -.25rem;
+}
+
+//Contentful Wordmark
+.wordmark {
+  display: inline-block;
+  margin: 0 1rem 0 0;
+  img {
+    width: 100%;
+    max-width: 85px;
+  }
 }

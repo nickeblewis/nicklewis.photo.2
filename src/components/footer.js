@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import contentful from '../images/contentful.svg'
 
 const Footer = () => (
   <footer className="footer">
@@ -7,7 +8,10 @@ const Footer = () => (
       <section className="footer__inner">
         <div className="footer__info">
           <h3><Link to="/">KNW Photography</Link></h3>
-          <p>All images &copy; {new Date().getFullYear()} KNW Photography. <br/>Website powered by <a href="https://www.contentful.com/" target="_blank">Contentful</a> and <a href="https://www.netlify.com/" target="_blank">Netlify</a>.</p>
+          <p>Copyright &copy; {new Date().getFullYear()} KNW Photography. All rights reserved.</p>
+          <a href="https://www.contentful.com/" className="wordmark" rel="nofollow" target="_blank">
+            <img src={contentful} alt="Powered by Contentful" />
+          </a>
         </div>
         <div className="footer__sitemap">
           <ul>
