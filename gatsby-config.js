@@ -2,22 +2,23 @@ require('dotenv').config();
 
 module.exports = {
   plugins: [
-    `gatsby-plugin-react-next`,
+    'gatsby-plugin-react-next',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     'gatsby-transformer-remark',
-    `gatsby-plugin-styled-components`,
+    'gatsby-plugin-fastclick',
+    'gatsby-plugin-styled-components',
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: 'UA-46446221-1',
         anonymize: false,
       },
     },
     {
-    resolve: `gatsby-plugin-nprogress`,
+    resolve: 'gatsby-plugin-nprogress',
     options: {
-      color: `#3e3e3e`,
+      color: '#3e3e3e',
       showSpinner: false,
       },
     },
