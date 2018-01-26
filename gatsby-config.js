@@ -2,14 +2,19 @@ require('dotenv').config();
 
 module.exports = {
   plugins: [
-    `gatsby-plugin-remove-trailing-slashes`,
     'gatsby-plugin-react-next',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     'gatsby-transformer-remark',
     'gatsby-plugin-styled-components',
     {
-      resolve: 'gatsby-plugin-google-analytics',
+    resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.knw.io`,
+      },
+    },
+    {
+    resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: 'UA-46446221-1',
         anonymize: false,
@@ -17,16 +22,16 @@ module.exports = {
     },
     {
     resolve: 'gatsby-plugin-nprogress',
-    options: {
-      color: '#3e3e3e',
-      showSpinner: false,
+      options: {
+        color: '#3e3e3e',
+        showSpinner: false,
+        },
       },
-    },
     {
     resolve: 'gatsby-source-contentful',
-    options: {
-      spaceId: process.env.CONTENTFUL_SPACE_ID,
-      accessToken: process.env.CONTENTFUL_DELIVERY_API_TOKEN,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_DELIVERY_API_TOKEN,
       },
     },
     'gatsby-plugin-netlify'

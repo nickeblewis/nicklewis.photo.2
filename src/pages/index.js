@@ -35,7 +35,7 @@ const page = data.contentfulHome;
 
         <div className="featured__newest sticky">
           <h2>Recent Work</h2>
-          <Link to={posts[0].node.slug}>
+          <Link to={posts[0].node.slug + "/"}>
             <Img sizes={posts[0].node.cover.sizes} alt={posts[0].node.cover.title} title={posts[0].node.cover.title} backgroundColor={"#f1f1f1"} />
             <h3>View Gallery</h3>
           </Link>
@@ -44,7 +44,7 @@ const page = data.contentfulHome;
         <ul className="featured__list">
           {posts.slice(1).map(({ node: post }) => (
             <li key={post.id}>
-              <Link to={post.slug}>
+              <Link to={post.slug + "/"}>
                 <Img sizes={post.cover.sizes} alt={post.cover.title} title={post.cover.title} backgroundColor={"#f1f1f1"} />
                 <h3>View Gallery</h3>
               </Link>

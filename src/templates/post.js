@@ -35,7 +35,7 @@ const PostTemplate = ({data}) => {
       <meta property="og:image" content={cover.sizes.src} />
       <meta property="og:image:width" content="1800" />
       <meta property="og:image:height" content="1200" />
-      <meta property="og:url" content={"https://www.knw.io/" + slug} />
+      <meta property="og:url" content={"https://www.knw.io/" + slug + "/"} />
     </Helmet>
 
     <div className="post">
@@ -45,10 +45,10 @@ const PostTemplate = ({data}) => {
       <div className="post-info">
         <div className="post-info__left">
           <h2 className="post-info-title">Details</h2>
-          <h3 className="post-category"><Link to={category}>{category}</Link></h3>
+          <h3 className="post-category"><Link to={"/" + category + "/"}>{category}</Link></h3>
           <h3 className="post-location">{location}</h3>
-          {postIndex.previous && (<Link className="post-previous" to={postIndex.previous.slug}>Previous</Link>)}
-          {postIndex.next && (<Link className="post-next" to={postIndex.next.slug}>Next</Link>)}
+          {postIndex.previous && (<Link className="post-previous" to={"/" + postIndex.previous.slug + "/"}>Previous</Link>)}
+          {postIndex.next && (<Link className="post-next" to={"/" + postIndex.next.slug + "/"}>Next</Link>)}
         </div>
         <div className="post-info__right">
           <div className="post-description" dangerouslySetInnerHTML={{ __html: description.childMarkdownRemark.html }} />
@@ -64,7 +64,7 @@ const PostTemplate = ({data}) => {
         )}
       </ul>
       {postIndex.next && (
-      <Link className="post-preview" to={postIndex.next.slug}>
+      <Link className="post-preview" to={"/" + postIndex.next.slug + "/"}>
         <h4 className="post-preview__title">Next</h4>
         <BgImg height={'40vh'} sizes={postIndex.next.cover.sizes} alt={postIndex.next.cover.title} title={postIndex.next.cover.title} backgroundColor={"#ffffff"} />
       </Link>)}

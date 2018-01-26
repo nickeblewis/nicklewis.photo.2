@@ -17,22 +17,22 @@ const posts = data.allContentfulGallery.edges;
         <meta property="og:image" content={posts[0].node.cover.sizes.src} />
         <meta property="og:image:width" content="1800" />
         <meta property="og:image:height" content="1200" />
-        <meta property="og:url" content="https://www.knw.io/lifestyle" />
+        <meta property="og:url" content="https://www.knw.io/lifestyle/" />
       </Helmet>
 
       <div className="category-navigation">
         <h2>Galleries</h2>
         <ul className="category-navigation__links">
-          <li><Link to="/galleries">All</Link></li>
-          <li><Link to="/lifestyle" className="active">Lifestyle</Link></li>
-          <li><Link to="/wedding">Wedding</Link></li>
+          <li><Link to="/galleries/">All</Link></li>
+          <li><Link to="/lifestyle/" className="active">Lifestyle</Link></li>
+          <li><Link to="/wedding/">Wedding</Link></li>
         </ul>
       </div>
 
       <ul className="galleries-list">
         {posts.map(({ node: post, index }) => (
           <li key={post.id}>
-            <Link to={post.slug}>
+            <Link to={"/" + post.slug + "/"}>
               <Img sizes={post.cover.sizes} alt={post.cover.title} title={post.cover.title} backgroundColor={"#f1f1f1"} />
               <h3>view gallery</h3>
             </Link>
