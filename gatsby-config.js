@@ -2,6 +2,7 @@ require('dotenv').config();
 
 module.exports = {
   plugins: [
+    `gatsby-plugin-remove-trailing-slashes`,
     'gatsby-plugin-react-next',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
