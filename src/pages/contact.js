@@ -85,6 +85,16 @@ class Contact extends React.Component {
       });
     }
 
+    addReadOnly(event) {
+      const target = event.target;
+      target.readOnly= true;
+    }
+
+    removeReadOnly(event) {
+      const target = event.target;
+      target.readOnly= false;
+    }
+
     handleResasonChange(event) {
       const target = event.target;
       const value = target.value;
@@ -130,7 +140,7 @@ class Contact extends React.Component {
 
         <div className="contact-info grid">
           <div className="cell--two-thirds">
-            <form className="form grid grid--center" name="contact" onSubmit={this.handleSubmit} data-netlify="true"  data-netlify-honeypot="bot">
+            <form className="form grid grid--center" name="contact" onSubmit={this.handleSubmit} data-netlify="true" data-netlify-honeypot="bot">
               <div className="form__container grid">
                 <input type="hidden" name="form-name" value="contact" />
                 <input className="form__name" name="name" type="text" placeholder="Full Name" value={this.state.name} onChange={this.handleInputChange} required/>
@@ -148,18 +158,22 @@ class Contact extends React.Component {
                   <option value="Google Search">Google Search Result</option>
                   <option value="Other">Other</option>
                 </select>
-                <div className="form__optional" className={(this.state.optionalQuestions ? "form__optional--visible" : "form__optional")}>
-                  <div className="form__date"><DatePicker name="eventDate" selected={this.state.eventDate} onChange={this.handleDateChange} minDate={moment()} readOnly placeholderText="Event Date"/></div>
-                  <input className="form__location" name="location" type="text" value={this.state.location} onChange={this.handleInputChange} placeholder="Location / Venue"/>
-                  <div className="form__guests">
-                    <label htmlFor="guests">Number Of Guests?</label> <span>{this.state.guests} Guests</span>
-                    <input name="guests" type="range" value={this.state.guests} onChange={this.handleInputChange}  min="0" max="400" step="5" />
+
+                {this.state.optionalQuestions &&
+                  <div className="form__optional" className="form__optional">
+                    <div className="form__date"><DatePicker name="eventDate" selected={this.state.eventDate} onChange={this.handleDateChange} minDate={moment()}  onFocus={this.addReadOnly} onBlur={this.removeReadOnly} required={true} placeholderText="Event Date"/></div>
+                    <input className="form__location" name="location" type="text" value={this.state.location} onChange={this.handleInputChange} placeholder="Location / Venue" required/>
+                    <div className="form__guests">
+                      <label htmlFor="guests">Number Of Guests?</label> <span>{this.state.guests} Guests</span>
+                      <input name="guests" type="range" value={this.state.guests} onChange={this.handleInputChange}  min="0" max="400" step="5"/>
+                    </div>
+                    <div className="form__budget">
+                      <label htmlFor="budget">Photography Budget?</label> <span>${this.state.budget}</span>
+                      <input name="budget" type="range" value={this.state.budget} onChange={this.handleInputChange}  min="0" max="10000" step="250"/>
+                    </div>
                   </div>
-                  <div className="form__budget">
-                    <label htmlFor="budget">Photography Budget?</label> <span>${this.state.budget}</span>
-                    <input name="budget" type="range" value={this.state.budget} onChange={this.handleInputChange}  min="0" max="10000" step="250" />
-                  </div>
-                </div>
+                }
+
                 <textarea className="form__message" name="message" type="text" placeholder="Message" value={this.state.message} onChange={this.handleInputChange} required></textarea>
                 <input className="form__submit" name="submit" type="submit" value="Send" />
                 <input type="hidden" name="bot"/>
@@ -179,7 +193,7 @@ class Contact extends React.Component {
         </div>
 
         <div className="modal--contact">
-          <button className="modal--contact__close" onClick={closeModal}><span/><span/></button>
+          <button className="modal--contact__close" onClick={closeModal}></button>
           <p>Thanks for reaching out. I will get back to you as soon as possible!</p>
           <button className="modal--contact__okay" onClick={closeModal}>Okay</button>
         </div>

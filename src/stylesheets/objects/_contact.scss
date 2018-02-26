@@ -128,10 +128,6 @@ div[class*='form__optional']{
 }
 
 .form .form__optional {
-  display: none;
-}
-
-.form .form__optional--visible {
   display: flex;
 }
 
@@ -334,16 +330,6 @@ select:invalid,select option[value=""] {
   right: 0;
   width: 2.5rem;
   height: 2.5rem;
-  span {
-    position: absolute;
-    display: block;
-    background: $base;
-    width: 40%;
-    height: 2px;
-    left: 30%;
-    &:first-child {transform: rotate(45deg);top: 50%;}
-    &:nth-child(2){transform: rotate(-45deg);bottom: 46%;}
-  }
 }
 
 .open--modal .modal--contact {
