@@ -25,7 +25,7 @@ const About = ({data}) => {
     swipeToSlide: true,
     draggable: false,
     centerMode: true,
-    centerPadding: 0,
+    centerPadding: '0px',
     arrows: true,
     touchMove: true,
     dots: true,
