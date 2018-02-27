@@ -140,7 +140,7 @@ class Contact extends React.Component {
 
         <div className="contact-info grid">
           <div className="cell--two-thirds">
-            <form className="form grid grid--center" name="contact" onSubmit={this.handleSubmit} data-netlify="true">
+            <form className="form grid grid--center" name="contact" onSubmit={this.handleSubmit} data-netlify="true" data-netlify-honeypot="phone">
               <div className="form__container grid">
                 <input type="hidden" name="form-name" value="contact" />
                 <input className="form__name" name="name" type="text" placeholder="Full Name" value={this.state.name} onChange={this.handleInputChange} required/>
@@ -173,9 +173,9 @@ class Contact extends React.Component {
                     </div>
                   </div>
                 }
+                <div hidden> <input name="phone" /> </div>
 
                 <textarea className="form__message" name="message" type="text" placeholder="Message" value={this.state.message} onChange={this.handleInputChange} required></textarea>
-                <div data-netlify-recaptcha="true"></div>
                 <input className="form__submit" name="submit" type="submit" value="Send" />
 
               </div>
