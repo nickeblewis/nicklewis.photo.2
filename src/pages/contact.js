@@ -140,9 +140,9 @@ class Contact extends React.Component {
 
         <div className="contact-info grid">
           <div className="cell--two-thirds">
-            <form className="form grid grid--center" name="contact" onSubmit={this.handleSubmit} data-netlify="true" data-netlify-honeypot="message2">
+            <form className="form grid grid--center" name="contact-form" onSubmit={this.handleSubmit} data-netlify="true" data-netlify-honeypot="message2">
               <div className="form__container grid">
-                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="form-name" value="contact-form" />
                 <input className="form__name" name="name" type="text" placeholder="Full Name" value={this.state.name} onChange={this.handleInputChange} required/>
                 <input className="form__email" name="email" type="email" placeholder="Email" value={this.state.email} onChange={this.handleInputChange} required/>
                 <select className="form__reason" name="reason" value={this.state.reason} onChange={this.handleResasonChange} required>
