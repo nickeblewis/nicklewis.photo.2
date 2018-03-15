@@ -85,16 +85,6 @@ class Contact extends React.Component {
       });
     }
 
-    addReadOnly(event) {
-      const target = event.target;
-      target.readOnly= true;
-    }
-
-    removeReadOnly(event) {
-      const target = event.target;
-      target.readOnly= false;
-    }
-
     handleResasonChange(event) {
       const target = event.target;
       const value = target.value;
@@ -140,9 +130,9 @@ class Contact extends React.Component {
 
         <div className="contact-info grid">
           <div className="cell--two-thirds">
-            <form className="form grid grid--center" name="contact-form" onSubmit={this.handleSubmit} data-netlify="true" data-netlify-honeypot="message2">
+            <form className="form grid grid--center" name="contact" onSubmit={this.handleSubmit} data-netlify="true" data-netlify-honeypot="message2">
               <div className="form__container grid">
-                <input type="hidden" name="form-name" value="contact-form" />
+                <input type="hidden" name="form-name" value="contact" />
                 <input className="form__name" name="name" type="text" placeholder="Full Name" value={this.state.name} onChange={this.handleInputChange} required/>
                 <input className="form__email" name="email" type="email" placeholder="Email" value={this.state.email} onChange={this.handleInputChange} required/>
                 <select className="form__reason" name="reason" value={this.state.reason} onChange={this.handleResasonChange} required>
@@ -159,20 +149,18 @@ class Contact extends React.Component {
                   <option value="Other">Other</option>
                 </select>
 
-                {this.state.optionalQuestions &&
-                  <div className="form__optional" className="form__optional">
-                    <div className="form__date"><DatePicker name="eventDate" selected={this.state.eventDate} onChange={this.handleDateChange} minDate={moment()}  onFocus={this.addReadOnly} onBlur={this.removeReadOnly} required={true} placeholderText="Event Date"/></div>
-                    <input className="form__location" name="location" type="text" value={this.state.location} onChange={this.handleInputChange} placeholder="Location / Venue" required/>
+                  <div className="form__optional" className={(this.state.optionalQuestions ? "form__optional--visible" : "form__optional")}>
+                    <div className="form__date"><DatePicker name="eventDate" selected={this.state.eventDate} onChange={this.handleDateChange} minDate={moment()}  onFocus={this.addReadOnly} onBlur={this.removeReadOnly} placeholderText="Event Date"/></div>
+                    <input className="form__location" name="location" type="text" value={this.state.location} onChange={this.handleInputChange} placeholder="Location / Venue" />
                     <div className="form__guests">
                       <label htmlFor="guests">Number Of Guests?</label> <span>{this.state.guests} Guests</span>
-                      <input name="guests" type="range" value={this.state.guests} onChange={this.handleInputChange}  min="0" max="400" step="5"/>
+                      <input name="guests" type="range" value={this.state.guests} onChange={this.handleInputChange} min="0" max="400" step="5"/>
                     </div>
                     <div className="form__budget">
                       <label htmlFor="budget">Photography Budget?</label> <span>${this.state.budget}</span>
-                      <input name="budget" type="range" value={this.state.budget} onChange={this.handleInputChange}  min="0" max="10000" step="250"/>
+                      <input name="budget" type="range" value={this.state.budget} onChange={this.handleInputChange} min="0" max="10000" step="250"/>
                     </div>
                   </div>
-                }
 
                 <textarea className="form__message" name="message" type="text" placeholder="Message" value={this.state.message} onChange={this.handleInputChange} required></textarea>
                 <input className="message2" name="message2" onChange={this.handleInputChange} autoComplete="nope" />

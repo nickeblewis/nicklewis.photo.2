@@ -345,3 +345,12 @@ select:invalid,select option[value=""] {
  position: absolute;
  left: -1px;
 }
+
+//Show and Hide Optional optionalQuestions
+.form .form__optional {
+  display: none;
+}
+
+.form .form__optional--visible {
+  display: flex;
+}
