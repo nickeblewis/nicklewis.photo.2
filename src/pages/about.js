@@ -90,8 +90,8 @@ export const query = graphql`
       id
       coverImages {
         title
-        sizes(maxWidth: 1800) {
-          ...GatsbyContentfulSizes_noBase64
+        sizes(maxWidth: 1000) {
+          ...GatsbyContentfulSizes_withWebp_noBase64
         }
       }
       bio {
@@ -102,7 +102,7 @@ export const query = graphql`
       pageDivider {
         title
         sizes(maxWidth: 1800) {
-          ...GatsbyContentfulSizes_noBase64
+          ...GatsbyContentfulSizes_withWebp_noBase64
         }
       }
       bucketList {
@@ -112,8 +112,8 @@ export const query = graphql`
       }
   		slider {
         title
-        sizes(maxWidth: 1800) {
-          ...GatsbyContentfulSizes_noBase64
+        sizes(maxWidth: 1000) {
+          ...GatsbyContentfulSizes_withWebp_noBase64
         }
       }
     }

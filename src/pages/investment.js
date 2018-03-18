@@ -93,8 +93,8 @@ export const query = graphql`
           id
           cover {
             title
-            sizes(maxWidth: 1800) {
-              ...GatsbyContentfulSizes_noBase64
+            sizes(maxWidth: 1000) {
+              ...GatsbyContentfulSizes_withWebp_noBase64
             }
           }
           pricing {
@@ -109,8 +109,8 @@ export const query = graphql`
           }
           slider {
             title
-            sizes(maxWidth: 1800) {
-              ...GatsbyContentfulSizes_noBase64
+            sizes(maxWidth: 1000) {
+              ...GatsbyContentfulSizes_withWebp_noBase64
             }
           }
         }
@@ -122,8 +122,8 @@ export const query = graphql`
       id
       cover {
         title
-        sizes(maxWidth: 1800) {
-          ...GatsbyContentfulSizes_noBase64
+        sizes(maxWidth: 1000) {
+          ...GatsbyContentfulSizes_withWebp_noBase64
         }
       }
     }
