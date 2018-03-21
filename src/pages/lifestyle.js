@@ -47,7 +47,7 @@ const posts = data.allContentfulGallery.edges;
 
 export const query = graphql`
 query LifestyleQuery {
-  allContentfulGallery(limit: 1000, filter:{category:{eq:"lifestyle"}}, sort: { fields: [date], order: DESC }) {
+  allContentfulGallery(limit: 1000, filter:{category:{eq:"travel"}}, sort: { fields: [date], order: DESC }) {
     edges {
       node {
         title

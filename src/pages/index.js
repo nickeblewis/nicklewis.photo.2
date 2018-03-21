@@ -2,11 +2,11 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import BgImg from '../components/background'
-import logo from '../images/logo.svg'
+import logo from '../images/logo.png'
 import Helmet from 'react-helmet'
 
 const IndexPage = ({data}) => {
-
+console.log(data)
 const posts = data.allContentfulGallery.edges;
 const page = data.contentfulHome;
 
@@ -14,7 +14,7 @@ const page = data.contentfulHome;
     <div>
 
       <Helmet>
-        <title>KNW Photography - SF Bay Area Wedding Photographer</title>
+        <title>Nick Lewis Photography - Hampshire, UK</title>
         <meta name="description" content="KNW Photography helps clients capture special moments in lifestyle and wedding photography in the San Francisco Bay Area" />
         <meta property="og:title" content="KNW Photography - SF Bay Area Wedding Photographer"/>
         <meta property="og:image" content={page.cover.sizes.src} />
@@ -81,7 +81,8 @@ export const query = graphql`
       title
       slug
       id
-      cover {
+      cover
+       {
         title
         sizes(maxWidth: 1800) {
           ...GatsbyContentfulSizes_withWebp_noBase64

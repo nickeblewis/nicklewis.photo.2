@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 
 const Galleries = ({data}) => {
 
+  console.log(data)
 const posts = data.allContentfulGallery.edges;
 
   return(

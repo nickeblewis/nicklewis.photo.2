@@ -47,7 +47,7 @@ const posts = data.allContentfulGallery.edges;
 
 export const query = graphql`
 query WeddingQuery {
-  allContentfulGallery(limit: 1000, filter:{category:{eq:"wedding"}}, sort: { fields: [date], order: DESC }) {
+  allContentfulGallery(limit: 1000, filter:{category:{eq:"travel"}}, sort: { fields: [date], order: DESC }) {
     edges {
       node {
         title
