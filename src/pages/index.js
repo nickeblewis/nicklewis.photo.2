@@ -23,7 +23,7 @@ const page = data.contentfulHome;
       </Helmet>
 
       <div className="intro intro--home sticky">
-        <h1><img className="logo" src={logo} /></h1>
+        {/* <h1><img className="logo" src={logo} /></h1> */}
         <BgImg height={'75vh'} sizes={page.cover.sizes} alt={page.cover.title} title={page.cover.title} />
       </div>
 

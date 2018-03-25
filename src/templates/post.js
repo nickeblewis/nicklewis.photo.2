@@ -59,6 +59,7 @@ const PostTemplate = ({data}) => {
           images.map((images, index) => (
             <li key={index}>
               <Img sizes={images.sizes} alt={images.title} title={images.title} outerWrapperClassName={images.description} backgroundColor={"#f1f1f1"} />
+              <h4 className="post-images__title">{images.description}</h4>
             </li>
           ))
         )}
