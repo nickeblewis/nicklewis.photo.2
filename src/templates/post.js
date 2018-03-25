@@ -29,13 +29,13 @@ const PostTemplate = ({data}) => {
     <div>
 
     <Helmet>
-      <title>{title} - KNW Photography</title>
+      <title>{title} - Nick Lewis</title>
       <meta name="description" content={title} />
-      <meta property="og:title" content={title + " - KNW Photography"}/>
+      <meta property="og:title" content={title + " - Nick Lewis"}/>
       <meta property="og:image" content={cover.sizes.src} />
       <meta property="og:image:width" content="1800" />
       <meta property="og:image:height" content="1200" />
-      <meta property="og:url" content={"https://www.knw.io/" + slug + "/"} />
+      <meta property="og:url" content={"https://www.nicklewis.net/" + slug + "/"} />
     </Helmet>
 
     <div className="post">

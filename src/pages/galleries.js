@@ -25,8 +25,8 @@ const posts = data.allContentfulGallery.edges;
         <h2>Galleries</h2>
         <ul className="category-navigation__links">
           <li><Link to="/galleries/" className="active">All</Link></li>
-          <li><Link to="/lifestyle/">Web</Link></li>
-          <li><Link to="/wedding/">Photography</Link></li>
+          <li><Link to="/music/">Music</Link></li>
+          <li><Link to="/travel/">Travel</Link></li>
         </ul>
       </div>
 

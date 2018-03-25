@@ -7,11 +7,11 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createRedirect } = boundActionCreators
 
   let redirectBatch1 = [
-    { f: `/category/lifestyle`, t: `/lifestyle/` },
-    { f: `/category/wedding`, t: '/wedding/' },
+    { f: `/category/music`, t: `/music/` },
+    { f: `/category/travel`, t: '/wedding/' },
     { f: `/pricing`, t: '/investment/' },
-    { f: `/pricing/lifestyle`, t: `/investment/` },
-    { f: `/pricing/wedding`, t: `/investment/` },
+    { f: `/pricing/music`, t: `/investment/` },
+    { f: `/pricing/travel`, t: `/investment/` },
   ]
 
   for (var { f: f, t: t } of redirectBatch1) {
