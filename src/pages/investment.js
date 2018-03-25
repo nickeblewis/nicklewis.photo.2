@@ -26,13 +26,13 @@ const Investment = ({data}) => {
     <div>
 
       <Helmet>
-        <title>Investment - KNW Photography</title>
-        <meta name="description" content="View pricing and information for lifestyle and wedding photography packages" />
-        <meta property="og:title" content="Investment - KNW Photography"/>
+        <title>Pricing - Nick Lewis</title>
+        <meta name="description" content="View pricing and information for our services" />
+        <meta property="og:title" content="Pricing - Nick Lewis"/>
         <meta property="og:image" content={page.cover.sizes.src} />
         <meta property="og:image:width" content="1800" />
         <meta property="og:image:height" content="1200" />
-        <meta property="og:url" content="https://www.knw.io/investment/" />
+        <meta property="og:url" content="https://www.nicklewis.io/investment/" />
       </Helmet>
 
       <div className="intro--investment">

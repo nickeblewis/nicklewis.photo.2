@@ -25,17 +25,18 @@ const posts = data.allContentfulGallery.edges;
         <h2>Galleries</h2>
         <ul className="category-navigation__links">
           <li><Link to="/galleries/" className="active">All</Link></li>
-          <li><Link to="/lifestyle/">Lifestyle</Link></li>
-          <li><Link to="/wedding/">Wedding</Link></li>
+          <li><Link to="/lifestyle/">Web</Link></li>
+          <li><Link to="/wedding/">Photography</Link></li>
         </ul>
       </div>
+
 
       <ul className="galleries-list">
         {posts.map(({ node: post, index }) => (
           <li key={post.id}>
             <Link to={"/" + post.slug + "/"}>
               <Img sizes={post.cover.sizes} alt={post.cover.title} title={post.cover.title} backgroundColor={"#f1f1f1"} />
-              <h3>view gallery</h3>
+              <h3>{post.title}</h3>
             </Link>
           </li>
         ))}

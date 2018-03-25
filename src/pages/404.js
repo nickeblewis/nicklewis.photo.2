@@ -9,7 +9,7 @@ const NotFoundPage = () => {
     <div>
 
       <Helmet>
-        <title>404 - KNW Photography</title>
+        <title>404 - Nick Lewis</title>
         <meta name="description" content="Page not found" />
       </Helmet>
 

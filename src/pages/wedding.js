@@ -3,17 +3,17 @@ import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 
-const Wedding = ({data}) => {
+const Wedding = ({ data }) => {
 
-const posts = data.allContentfulGallery.edges;
+  const posts = data.allContentfulGallery.edges;
 
-  return(
+  return (
     <div>
 
       <Helmet>
         <title>Wedding Galleries - KNW Photography</title>
         <meta name="description" content="View wedding galleries by KNW Photography" />
-        <meta property="og:title" content="Wedding Galleries - KNW Photography"/>
+        <meta property="og:title" content="Wedding Galleries - KNW Photography" />
         <meta property="og:image" content={posts[0].node.cover.sizes.src} />
         <meta property="og:image:width" content="1800" />
         <meta property="og:image:height" content="1200" />
@@ -24,10 +24,11 @@ const posts = data.allContentfulGallery.edges;
         <h2>Galleries</h2>
         <ul className="category-navigation__links">
           <li><Link to="/galleries/">All</Link></li>
-          <li><Link to="/lifestyle/">Lifestyle</Link></li>
-          <li><Link to="/wedding/" className="active">Wedding</Link></li>
+          <li><Link to="/lifestyle/">Web</Link></li>
+          <li><Link to="/wedding/" className="active">Photography</Link></li>
         </ul>
       </div>
+
 
       <ul className="galleries-list">
         {posts.map(({ node: post, index }) => (

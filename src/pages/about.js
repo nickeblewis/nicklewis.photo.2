@@ -35,13 +35,13 @@ const About = ({data}) => {
   return(
     <div>
       <Helmet>
-        <title>About - KNW Photography</title>
-        <meta name="description" content="Learn about San Francisco Bay Area photographer Kirsten Noelle Wiemer" />
-        <meta property="og:title" content="About - KNW Photography"/>
+        <title>About - Nick Lewis</title>
+        <meta name="description" content="Learn about Hampshire based web developer and photographer Nick Lewis" />
+        <meta property="og:title" content="About - Nick Lewis - Web and Photography"/>
         <meta property="og:image" content={coverImages[0].sizes.src} />
         <meta property="og:image:width" content="800" />
         <meta property="og:image:height" content="1000" />
-        <meta property="og:url" content="https://www.knw.io/about/" />
+        <meta property="og:url" content="https://www.nicklewis.net/about/" />
       </Helmet>
 
       <ul className="grid grid--about">

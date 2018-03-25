@@ -14,9 +14,9 @@ const page = data.contentfulHome;
     <div>
 
       <Helmet>
-        <title>Nick Lewis Photography - Hampshire, UK</title>
-        <meta name="description" content="KNW Photography helps clients capture special moments in lifestyle and wedding photography in the San Francisco Bay Area" />
-        <meta property="og:title" content="KNW Photography - SF Bay Area Wedding Photographer"/>
+        <title>Nick Lewis - Web and Photography</title>
+        <meta name="description" content="Nick Lewis helps develop web experiences featuring rich photography for the image makers of the World" />
+        <meta property="og:title" content="Nick Lewis - web developer and photography"/>
         <meta property="og:image" content={page.cover.sizes.src} />
         <meta property="og:image:width" content="1800" />
         <meta property="og:image:height" content="1200" />
@@ -34,10 +34,10 @@ const page = data.contentfulHome;
       <div className="featured">
 
         <div className="featured__newest sticky">
-          <h2>Recent Work</h2>
+          <h2>{posts[0].node.title}</h2>
           <Link to={posts[0].node.slug + "/"}>
             <Img sizes={posts[0].node.cover.sizes} alt={posts[0].node.cover.title} title={posts[0].node.cover.title} backgroundColor={"#f1f1f1"} />
-            <h3>View Gallery</h3>
+            <h3>{posts[0].node.title}</h3>
           </Link>
         </div>
 
@@ -46,7 +46,7 @@ const page = data.contentfulHome;
             <li key={post.id}>
               <Link to={post.slug + "/"}>
                 <Img sizes={post.cover.sizes} alt={post.cover.title} title={post.cover.title} backgroundColor={"#f1f1f1"} />
-                <h3>View Gallery</h3>
+                <h3>{post.title}</h3>
               </Link>
             </li>
           ))}

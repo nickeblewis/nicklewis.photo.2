@@ -11,7 +11,7 @@ const posts = data.allContentfulGallery.edges;
     <div>
 
       <Helmet>
-        <title>Lifestyle Galleries - KNW Photography</title>
+        <title>Galleries - KNW Photography</title>
         <meta name="description" content="View lifestyle galleries by KNW Photography" />
         <meta property="og:title" content="Lifestyle Galleries - KNW Photography"/>
         <meta property="og:image" content={posts[0].node.cover.sizes.src} />
@@ -24,8 +24,8 @@ const posts = data.allContentfulGallery.edges;
         <h2>Galleries</h2>
         <ul className="category-navigation__links">
           <li><Link to="/galleries/">All</Link></li>
-          <li><Link to="/lifestyle/" className="active">Lifestyle</Link></li>
-          <li><Link to="/wedding/">Wedding</Link></li>
+          <li><Link to="/lifestyle/" className="active">Web</Link></li>
+          <li><Link to="/wedding/">Photography</Link></li>
         </ul>
       </div>
 
