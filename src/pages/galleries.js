@@ -36,7 +36,7 @@ const posts = data.allContentfulGallery.edges;
           <li key={post.id}>
             <Link to={"/" + post.slug + "/"}>
               <Img sizes={post.cover.sizes} alt={post.cover.title} title={post.cover.title} backgroundColor={"#f1f1f1"} />
-              <h3>{post.title}</h3>
+              <h3>view {post.title}</h3>
             </Link>
           </li>
         ))}

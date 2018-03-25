@@ -37,7 +37,7 @@ const page = data.contentfulHome;
           <h2>{posts[0].node.title}</h2>
           <Link to={posts[0].node.slug + "/"}>
             <Img sizes={posts[0].node.cover.sizes} alt={posts[0].node.cover.title} title={posts[0].node.cover.title} backgroundColor={"#f1f1f1"} />
-            <h3>{posts[0].node.title}</h3>
+            <h3>view {posts[0].node.title}</h3>
           </Link>
         </div>
 
@@ -46,7 +46,7 @@ const page = data.contentfulHome;
             <li key={post.id}>
               <Link to={post.slug + "/"}>
                 <Img sizes={post.cover.sizes} alt={post.cover.title} title={post.cover.title} backgroundColor={"#f1f1f1"} />
-                <h3>{post.title}</h3>
+                <h3>view {post.title}</h3>
               </Link>
             </li>
           ))}
